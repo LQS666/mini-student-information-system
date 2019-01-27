@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5FE5B04-AFFB-403E-BEB8-DC840C421895}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>System_zarządzania_studentami_informatyki</RootNamespace>
+    <AssemblyName>System_zarządzania_studentami_informatyki</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddStudentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentWindow.Designer.cs">
+      <DependentUpon>AddStudentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubjectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubjectWindow.Designer.cs">
+      <DependentUpon>AddSubjectWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStudentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStudentWindow.Designer.cs">
+      <DependentUpon>EditStudentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSubjectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSubjectWindow.Designer.cs">
+      <DependentUpon>EditSubjectWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListStudentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListStudentWindow.Designer.cs">
+      <DependentUpon>ListStudentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mySqlConn.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scores.cs" />
+    <Compile Include="ScoresWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoresWindow.Designer.cs">
+      <DependentUpon>ScoresWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students.cs" />
+    <Compile Include="Subjects.cs" />
+    <Compile Include="UserControlHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome.Designer.cs">
+      <DependentUpon>UserControlHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlInfo.Designer.cs">
+      <DependentUpon>UserControlInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddStudentWindow.resx">
+      <DependentUpon>AddStudentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSubjectWindow.resx">
+      <DependentUpon>AddSubjectWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStudentWindow.resx">
+      <DependentUpon>EditStudentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSubjectWindow.resx">
+      <DependentUpon>EditSubjectWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListStudentWindow.resx">
+      <DependentUpon>ListStudentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScoresWindow.resx">
+      <DependentUpon>ScoresWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome.resx">
+      <DependentUpon>UserControlHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlInfo.resx">
+      <DependentUpon>UserControlInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\maleImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\femaleImage.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
